@@ -88,47 +88,143 @@ const Todos = [
     }
 ]
 
-console.log(Todos)
-console.log(Todos[2].text)
+// console.log(Todos)
+// console.log(Todos[2].text)
 
-//Looops
+// //Looops
 
-console.warn("FOR loop");
-for (let index = 0; index < Todos.length; index++) {
-    console.log(Todos[index].text);    
-}
+// console.warn("FOR loop");
+// for (let index = 0; index < Todos.length; index++) {
+//     console.log(Todos[index].text);    
+// }
 
-console.warn("While Loop");
-let index = 0
-while (index<Todos.length) {
-    console.log(Todos[index].text)
-    index = index + 1
-}
+// console.warn("While Loop");
+// let index = 0
+// while (index<Todos.length) {
+//     console.log(Todos[index].text)
+//     index = index + 1
+// }
 
-console.warn("For Of");
-for (let todo of Todos){
-    console.log(todo.text);    
-}
+// console.warn("For Of");
+// for (let todo of Todos){
+//     console.log(todo.text);    
+// }
 
 
-console.warn("For Each");
-Todos.forEach(function(todo){
-    console.log(todo.text)
-})
+// console.warn("For Each");
+// Todos.forEach(function(todo){
+//     console.log(todo.text)
+// })
 
-console.warn("Map");
-Todos.map(function(todo){
-    console.log(todo.text)
-})
+// console.warn("Map");
+// Todos.map(function(todo){
+//     console.log(todo.text)
+// })
 
-console.warn("Filter");
-Todos.filter(function(todo){
-    return todo.isComplete == true
-}).map(function(todo){
-    console.log(todo.text);
-})
+// console.warn("Filter");
+// Todos.filter(function(todo){
+//     return todo.isComplete == true
+// }).map(function(todo){
+//     console.log(todo.text);
+// })
 
 
 // CONDITIONS
+
+const x = 12
+const y = '10'
+
+// console.log(x == y)
+// console.log(x === y)
+
+// // If else it
+// if(x==10){
+//     console.log('x is 10');    
+// }else if(x<10){
+//     console.log('x is less than 10');
+// }else{
+//     console.log('x is greater than 10')
+// }
+
+// // Switch
+// const color = 'red'
+// switch(color){
+//     case 'red':
+//         console.log('STOP')
+//         break    
+//     case 'yellow':
+//         console.log('Look')
+//         break
+//     case 'green':
+//         console.log('Go')  
+//         break
+//     default:
+//         console.log("Thank you")
+//         break      
+// }
+
+// // Ternary Operator
+// color == 'yellow' ? console.log('color is not red') : console.log('color is not yellow')
+
+// functions
+// function greet(name){
+//     console.log(`Hello ${name}`)
+//     return 
+// }
+
+// console.warn("Map");
+// Todos.map(function (todo) {
+//     console.log(todo.text)
+// })
+
+
+
+// const greet = (name, age) => `Hello ${name}, happy ${age} bday`;
+// console.log(greet('jithin', 29));
+
+
+// function sum(...theArgs) {
+//     return theArgs.reduce((previous, current) => {
+//         return previous + current;
+//     });
+// }
+
+// const newSum = (...theArgs) => theArgs.reduce((previous, current) => (previous + current))
+
+function addTwoNumbers(numOne, numTwo){
+    return numOne + numTwo
+}
+
+function newSum(...theArgs){
+    return theArgs.reduce(addTwoNumbers)
+}
+
+console.log(newSum(5,6,8, 20, 25))
+
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.dob = new Date(dob)  
+// }
+
+// const newPerson = new Person('jithin', 'kumar', 'December 17, 1995 03: 24: 00')
+// console.log(newPerson)
+
+// class Person {
+//     constructor(firstName, lastName, dob){
+//         this.firstName = firstName
+//         this.lastName = lastName
+//         this.dob = dob
+//     }
+// }
+
+// const newPerson = new Person('jithin', 'kumar', 'December 17, 1995 03: 24: 00')
+// console.log(newPerson);
+
+document.getElementById('btn').style.backgroundColor = 'red'
+document.getElementsByClassName('temp')[0].innerText= "This is some dummy text"
+
+
+
 
 
