@@ -221,8 +221,42 @@ console.log(newSum(5,6,8, 20, 25))
 // const newPerson = new Person('jithin', 'kumar', 'December 17, 1995 03: 24: 00')
 // console.log(newPerson);
 
-document.getElementById('btn').style.backgroundColor = 'red'
-document.getElementsByClassName('temp')[0].innerText= "This is some dummy text"
+// document.getElementById('btn').style.backgroundColor = 'red'
+// const para =  document.querySelectorAll('.temp')
+// console.log(para);
+// para.forEach(function(paraItem){
+//     paraItem.innerHTML = "<p>Changed</p>"
+// })
+
+document.getElementById('btn').addEventListener('click', function(){
+    const para = document.querySelectorAll('.temp')
+    para.forEach(function (paraItem) {
+        paraItem.innerHTML = "<p>Changed</p>"
+    })
+})
+
+function changeTitle(){
+    let title = 'Introduction to Javascript'
+    if (document.querySelector('#title').innerText === title){
+        console.log(document.querySelector('#title').innerText )
+        document.querySelector('#title').innerText = "This is changed by clicking the button"
+    }else{
+        document.querySelector('#title').innerText = title
+    }  
+}
+
+document.querySelector('#btn2').addEventListener('focus',changeTitle)
+
+
+// on(function(){
+//     console.log("clicked")
+//     const para = document.querySelectorAll('.temp')
+//     para.forEach(function (paraItem) {
+//         paraItem.innerHTML = "<p>Changed</p>"
+//     })
+// })
+
+// document.getElementsByClassName('temp')[0].innerText= "This is some dummy text"
 
 
 
